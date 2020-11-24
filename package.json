@@ -6,11 +6,9 @@
   "scripts": {
     "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --use Math=JSMath --runtime none --importMemory --sourceMap --debug --measure",
     "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat -d build/optimized.d.ts --use Math=JSMath -O3 --runtime none --importMemory --sourceMap --measure",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
-    "start": "http-server . -o -c-1"
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
   },
   "devDependencies": {
-    "assemblyscript": "latest",
-    "http-server": "^0.12.3"
+    "assemblyscript": "latest"
   }
 }
